@@ -1,0 +1,15 @@
+{
+  "name": "ang-project",
+  "authors": ["Rajibul <rajibul.hasan@yaana.com>"],
+  "description": "Demo project",
+  "main": ["bower_components/angular/angular.js"],
+  "keywords": ["testing", "bower"],
+  "license": "MIT",
+  "homepage": "https://github.com/yourusername/angularjs_v1_counter",
+  "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"],
+  "dependencies": {
+    "angular": "^1.8.3",
+    "angular-route": "^1.8.3",
+    "angular-bootstrap": "2.4.0"
+  }
+}

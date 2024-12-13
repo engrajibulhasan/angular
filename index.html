@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Angular app</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="app.js"></script>
+    <base href="/">
+
+</head>
+
+<body ng-app="counterApp">
+    <section class="container-fluid bg-success">
+        <nav class="container p-2">
+            <a class="text-white text-decoration-none px-3" href="/">Home</a>
+            <a class="text-white text-decoration-none px-3" href="/about">About Us</a>
+            <a class="text-white text-decoration-none px-3" href="/users">Users</a>
+            <a class="text-white text-decoration-none px-3" href="/contact-us">Contact Us</a>
+        </nav>
+    </section>
+
+    <div class="container" ng-view></div>
+</body>
+
+</html>
