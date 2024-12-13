@@ -5,7 +5,7 @@
   "main": ["bower_components/angular/angular.js"],
   "keywords": ["testing", "bower"],
   "license": "MIT",
-  "homepage": "https://github.com/yourusername/angularjs_v1_counter",
+  "homepage": "https://github.com/engrajibulhasan/angular",
   "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"],
   "dependencies": {
     "angular": "^1.8.3",

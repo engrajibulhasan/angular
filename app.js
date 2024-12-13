@@ -1,5 +1,6 @@
-const app = angular.module("counterApp", []);
+const app = angular.module("counterApp", ["ngRoute"]);
 
+// Config
 app.config([
   "$routeProvider",
   "$locationProvider",
@@ -7,29 +8,32 @@ app.config([
     // Configure routes
     $routeProvider
       .when("/", {
-        templateUrl: "home.html",
+        templateUrl: "views/home.html",
         controller: "HomeController",
       })
       .when("/about", {
-        templateUrl: "about.html",
+        templateUrl: "views/about.html",
         controller: "AboutController",
-      })
-      .when("/users", {
-        templateUrl: "users.html",
       })
       .otherwise({
         redirectTo: "/",
       });
 
     // Enable hashbang mode (#!) for routes
-    $locationProvider.hashPrefix("!");
+    // Enable HTML5 mode for clean URLs
+    $locationProvider.html5Mode({
+      enabled: true, // Enable HTML5 mode
+    });
   },
 ]);
 
+// Controllers ===============================
+
+// Home
 app.controller("HomeController", function ($scope, $timeout) {
   $scope.counterr = 0;
   $scope.gender = "Male";
-  $scope.message = "Welcome home";
+  $scope.message = "Welcome to home";
 
   $scope.increment = function () {
     $scope.counterr++;
@@ -54,6 +58,7 @@ app.controller("HomeController", function ($scope, $timeout) {
   }, 1000);
 });
 
+// About
 app.controller("AboutController", function ($scope) {
-  $scope.message = "Welcome About Us";
+  $scope.message = "Welcome to About Us";
 });
